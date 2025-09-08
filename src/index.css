@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default font */
+* {
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings with luxury serif */
+h1, h2, h3, .prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar active state */
+a.active hr {
+  @apply block;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep scrollbar visible and style it */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* light background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6b0f1a; /* burgundy */
+  border-radius: 10px;
+  border: 2px solid #f4f4f4; /* creates padding effect */
+}
+
+/* Mobile navbar active state */
+@media (max-width: 640px) {
+  a.active {
+    @apply text-white bg-[#6b0f1a];
+  }
+}
+
